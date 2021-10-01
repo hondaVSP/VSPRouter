@@ -1,0 +1,6 @@
+framework module Pods_VSPRouter_Tests {
+  umbrella header "Pods-VSPRouter_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

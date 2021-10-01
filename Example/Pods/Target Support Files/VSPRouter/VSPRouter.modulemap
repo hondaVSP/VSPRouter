@@ -1,0 +1,6 @@
+framework module VSPRouter {
+  umbrella header "VSPRouter-umbrella.h"
+
+  export *
+  module * { export * }
+}
