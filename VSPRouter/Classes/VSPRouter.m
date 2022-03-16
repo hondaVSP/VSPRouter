@@ -60,7 +60,7 @@ NSString *const VSPRouterParameterUserInfo = @"VSPRouterParameterUserInfo";
 + (void)openURL:(NSString *)URL withUserInfo:(NSDictionary *)userInfo completion:(void (^)(id result))completion
 {
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSMutableDictionary *parameters = [[self sharedInstance] extractParametersFromURL:URL matchExactly:NO];
+    NSMutableDictionary *parameters = [[self sharedInstance] extractParametersFromURL:URL matchExactly:YES];
     
     [parameters enumerateKeysAndObjectsUsingBlock:^(id key, NSString *obj, BOOL *stop) {
         if ([obj isKindOfClass:[NSString class]]) {
@@ -251,7 +251,13 @@ NSString *const VSPRouterParameterUserInfo = @"VSPRouterParameterUserInfo";
     }
 
     if (subRoutes[@"_"]) {
-        parameters[@"block"] = [subRoutes[@"_"] copy];
+        if (found) {
+            parameters[@"block"] = [subRoutes[@"_"] copy];
+        }
+        else {
+            //路由未匹配
+            NSLog(@"路由未匹配，url=%@",url);
+        }
     }
     
     return parameters;

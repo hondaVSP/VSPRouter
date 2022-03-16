@@ -1,6 +1,6 @@
 PODS:
   - Kiwi (3.0.0)
-  - VSPRouter (1.0.0)
+  - VSPRouter (1.0.3)
 
 DEPENDENCIES:
   - Kiwi
@@ -16,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  VSPRouter: bf993c38c3c7c186562d77d9252e2f623d1f55be
+  VSPRouter: ab5058f36ea01fe46be13f1e6be2b67a42ef400f
 
 PODFILE CHECKSUM: aae6ff824ecdd5e58b89aba3a1830ce2418ede38
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
